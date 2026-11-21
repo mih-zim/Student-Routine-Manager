@@ -1,0 +1,41 @@
+{
+  "name": "student-routine-management-system",
+  "version": "1.0.0",
+  "description": "Student Routine Management System",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^45.4.1",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "com.student.routine",
+    "productName": "Student Routine Management System",
+    "files": [
+      "main.js",
+      "index.html",
+      "style.css",
+      "script.js",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Education"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    }
+  }
+}

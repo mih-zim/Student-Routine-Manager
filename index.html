@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Routine Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">SR</div>
+        <div><strong>Student Routine</strong><small>Management System</small></div>
+      </div>
+      <nav class="nav">
+        <button class="nav-link active" data-view="dashboard"><span>▦</span> Dashboard</button>
+        <button class="nav-link" data-view="form"><span>＋</span> Add Routine</button>
+        <button class="nav-link" data-view="routine"><span>▤</span> Weekly Schedule</button>
+        <button class="nav-link" data-view="routine"><span>✎</span> Manage Routine</button>
+      </nav>
+      <div class="sidebar-foot">Student Routine<br><small>Desktop App · v1.0</small></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1 id="pageTitle">Dashboard</h1>
+          <p id="pageSubtitle">Your weekly classes, organized in one place.</p>
+        </div>
+        <button class="btn primary" id="headerAdd">＋ Add Routine</button>
+      </header>
+
+      <section class="view active" id="dashboardView">
+        <div class="stats">
+          <article class="stat"><div class="stat-icon blue">▤</div><div><span>Total Classes</span><strong id="totalClasses">0</strong></div></article>
+          <article class="stat"><div class="stat-icon purple">▦</div><div><span>Subjects</span><strong id="totalSubjects">0</strong></div></article>
+          <article class="stat"><div class="stat-icon orange">♙</div><div><span>Teachers</span><strong id="totalTeachers">0</strong></div></article>
+          <article class="stat"><div class="stat-icon green">◷</div><div><span>Today's Classes</span><strong id="todayClasses">0</strong></div></article>
+        </div>
+
+        <div class="dashboard-grid">
+          <section class="panel">
+            <div class="panel-heading">
+              <div><h2>Today's Classes</h2><p id="todayDate">Today</p></div>
+              <span class="pill">Today</span>
+            </div>
+            <div id="todayClassList" class="today-list"></div>
+          </section>
+          <section class="panel">
+            <div class="panel-heading"><div><h2>Quick Actions</h2><p>Manage your routine</p></div></div>
+            <button class="quick-action" id="quickAdd"><span class="quick-symbol blue">＋</span><span><b>Add New Class</b><small>Create a class routine</small></span><span class="chevron">›</span></button>
+            <button class="quick-action" id="quickView"><span class="quick-symbol purple">▦</span><span><b>Weekly Schedule</b><small>View all your classes</small></span><span class="chevron">›</span></button>
+            <button class="quick-action" id="quickSearch"><span class="quick-symbol orange">⌕</span><span><b>Search Classes</b><small>Find a subject or teacher</small></span><span class="chevron">›</span></button>
+          </section>
+        </div>
+
+        <section class="panel">
+          <div class="panel-heading"><div><h2>Weekly Routine</h2><p>Your upcoming class schedule</p></div><button class="btn light" id="dashboardViewAll">View All →</button></div>
+          <div class="table-wrap"><table><thead><tr><th>Day</th><th>Subject</th><th>Teacher</th><th>Room</th><th>Time</th></tr></thead><tbody id="dashboardTable"></tbody></table></div>
+        </section>
+      </section>
+
+      <section class="view" id="routineView">
+        <section class="panel">
+          <div class="panel-heading"><div><h2>Manage Weekly Routine</h2><p>Add, edit, search, filter, or remove classes.</p></div><button class="btn primary" id="routineAdd">＋ Add Class</button></div>
+          <div class="toolbar">
+            <input id="searchInput" type="search" placeholder="Search subject or teacher">
+            <select id="dayFilter"><option value="">All Days</option></select>
+            <button class="btn light" id="clearAll">Clear Routine</button>
+            <button class="btn light" id="printBtn">Print</button>
+          </div>
+          <div class="table-wrap"><table><thead><tr><th>Day</th><th>Subject</th><th>Teacher</th><th>Room</th><th>Time</th><th>Actions</th></tr></thead><tbody id="routineTable"></tbody></table></div>
+        </section>
+      </section>
+
+      <section class="view" id="formView">
+        <section class="panel form-panel">
+          <div class="panel-heading"><div><h2 id="formTitle">Add Class Routine</h2><p>Enter the class details below.</p></div></div>
+          <form id="routineForm">
+            <div class="form-grid">
+              <label>Subject Name<input id="subject" required maxlength="80" placeholder="e.g. Data Structures"></label>
+              <label>Teacher Name<input id="teacher" required maxlength="80" placeholder="e.g. Mr. Rahman"></label>
+              <label>Room Number<input id="room" required maxlength="40" placeholder="e.g. Room 301"></label>
+              <label>Day<select id="day" required></select></label>
+              <label>Start Time<input id="startTime" type="time" required></label>
+              <label>End Time<input id="endTime" type="time" required></label>
+            </div>
+            <div id="formWarning" class="form-warning" role="status"></div>
+            <div class="form-actions"><button type="button" class="btn light" id="cancelForm">Cancel</button><button type="submit" class="btn primary">Save Routine</button></div>
+          </form>
+        </section>
+      </section>
+
+      <footer>Student Routine Management System © 2026</footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
