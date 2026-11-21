@@ -3,10 +3,7 @@
   "name": "student-routine-management-system",
   "version": "1.0.0",
   "description": "Student Routine Management System",
-  "author": {
-    "name": "mih-zim",
-    "email": "mdzim13579@gmail.com"
-  },
+  "author": "mih-zim <mdzim13579@gmail.com>",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -30,7 +27,7 @@
       "target": "nsis"
     },
     "linux": {
-      "maintainer": "mih-zim <mih-zim@users.noreply.github.com>",
+      "maintainer": "mih-zim <mdzim13579@gmail.com>",
       "target": [
         "AppImage",
         "deb"
