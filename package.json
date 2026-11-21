@@ -1,7 +1,9 @@
+
 {
   "name": "student-routine-management-system",
   "version": "1.0.0",
   "description": "Student Routine Management System",
+  "author": "mih-zim",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -25,6 +27,7 @@
       "target": "nsis"
     },
     "linux": {
+      "maintainer": "mih-zim",
       "target": [
         "AppImage",
         "deb"
