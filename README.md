@@ -6,16 +6,6 @@ A lightweight, user-friendly desktop application built with **ElectronJS** for m
 
 ---
 
-## Screenshots
-
-Add screenshots of your application in this section.
-
-| **Dashboard / Home Page** | **Weekly Routine** |
-| --- | --- |
-| Add your application screenshot here | Add your weekly routine screenshot here |
-
----
-
 ## Features
 
 - **Class Routine Management:** Add class information, including subject name, teacher, classroom, day, and class time.
@@ -116,7 +106,3 @@ The main objective of this project is to simplify the process of creating and ma
 It reduces manual timetable management, helps identify scheduling conflicts, and provides an organized way to view and maintain weekly class schedules.
 
 ---
-
-## License
-
-This project was developed for educational purposes as part of a desktop application development project.
