@@ -1,4 +1,4 @@
-# Student Routine Management System
+# Student Routine Manager
 
 A lightweight, user-friendly desktop application built with **ElectronJS** for managing student class routines, organizing weekly schedules, and detecting timetable conflicts.
 
